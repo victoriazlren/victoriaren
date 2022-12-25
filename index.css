@@ -3,29 +3,65 @@ body{
   padding: 10px;
 }
 
-#container{
-  width:100%;
+#container {
   margin-left: auto;
   margin-right: auto;
-  height:100%;
+  display: flex;
+  flex-direction: row;
 }
 
-#container #left{
-  width:60%;
-  float:left;
-  height:100%;
+#image {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10rem;
 }
 
-#container #right{
-  width:40%;
-  float:right;
-  height:100%;
+.left{
+  width: 80%;
+  display: inline-block;
+  float: left;
+}
+
+.right{
+  display: inline-block;
+  position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  #container {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #image {
+    width: 40%;
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .right{
+    position: relative;
+    text-align: left;
+  }
+
+  .left{
+    width: 100%;
+  }
+}
+
+#center-image {
+  text-align: center;
 }
 
 h1 {
-font-size: 57;
+  font-size: 57;
 }
 
 p {
-font-size: 18px;
+  font-size: 18px;
 }
