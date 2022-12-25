@@ -1,1 +1,31 @@
+body{
+  margin: 3%;
+  padding: 10px;
+}
 
+#container{
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  height:100%;
+}
+
+#container #left{
+  width:60%;
+  float:left;
+  height:100%;
+}
+
+#container #right{
+  width:40%;
+  float:right;
+  height:100%;
+}
+
+h1 {
+font-size: 57;
+}
+
+p {
+font-size: 18px;
+}
