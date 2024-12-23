@@ -1,4 +1,4 @@
-body{
+body {
   margin: 3%;
   padding: 10px;
 }
@@ -8,60 +8,54 @@ body{
   margin-right: auto;
   display: flex;
   flex-direction: row;
+  gap: 2rem;
 }
 
 #image {
-  width: 50%;
+  width: 100%;
+  max-width: 250px; /* Reduced from 400px to make image smaller */
+  height: auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10rem;
+  margin: 0 auto;
+  margin-top: 2rem;
 }
 
-.left{
-  width: 80%;
-  display: inline-block;
-  float: left;
+.left {
+  flex: 4; /* Increased from 3 to give text more space */
+  min-width: 0;
 }
 
-.right{
-  display: inline-block;
-  position: relative;
+.right {
+  flex: 1; /* Decreased from 2 to make image column narrower */
+  min-width: 0;
 }
 
 @media screen and (max-width: 900px) {
   #container {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
     flex-direction: column;
   }
 
   #image {
-    width: 40%;
-    margin: auto;
-    display: block;
+    width: 60%; /* Reduced from 80% */
+    max-width: 200px; /* Reduced from 300px */
     margin-top: 1rem;
   }
 
-  .right{
-    position: relative;
-    text-align: left;
-  }
-
-  .left{
+  .left, .right {
     width: 100%;
   }
 }
 
 #center-image {
   text-align: center;
+  margin-top: 0.5rem;
 }
 
 h1 {
-  font-size: 57;
+  font-size: 3.5rem;
 }
 
 p {
-  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.5;
 }
