@@ -1,61 +1,91 @@
+:root {
+  --text: #111;
+  --muted: #555;
+  --rule: rgba(0, 0, 0, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  margin: 3%;
-  padding: 10px;
+  margin: 0;
+  font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text);
+  background: #fff;
 }
 
 #container {
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 0 24px;
 
-#image {
-  width: 100%;
-  max-width: 250px; /* Reduced from 400px to make image smaller */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 2rem;
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
 }
 
 .left {
-  flex: 4; /* Increased from 3 to give text more space */
+  flex: 1;
   min-width: 0;
 }
 
 .right {
-  flex: 1; /* Decreased from 2 to make image column narrower */
-  min-width: 0;
-}
-
-@media screen and (max-width: 900px) {
-  #container {
-    flex-direction: column;
-  }
-
-  #image {
-    width: 60%; /* Reduced from 80% */
-    max-width: 200px; /* Reduced from 300px */
-    margin-top: 1rem;
-  }
-
-  .left, .right {
-    width: 100%;
-  }
-}
-
-#center-image {
+  width: 240px;
   text-align: center;
-  margin-top: 0.5rem;
 }
 
 h1 {
-  font-size: 3.5rem;
+  margin: 0 0 16px;
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
 p {
-  font-size: 1.125rem;
-  line-height: 1.5;
+  margin: 0 0 14px;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+}
+
+a:hover {
+  border-bottom-color: rgba(0, 0, 0, 0.45);
+}
+
+figure {
+  margin: 0;
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  /* subtle polish without looking “designed” */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+@media (max-width: 720px) {
+  #container {
+    margin: 40px auto;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .right {
+    width: min(280px, 100%);
+  }
 }
