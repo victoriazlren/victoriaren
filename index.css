@@ -66,14 +66,12 @@ p.cta{
 
 /* link style */
 a{
-  color: inherit;
-  text-decoration: none;
-  background: linear-gradient(transparent 70%, var(--linkA) 70%);
-  padding: 0 2px;
-  border-radius: 3px;
+  color: #1a4fff;
+  text-decoration: underline;
 }
+
 a:hover{
-  background: linear-gradient(transparent 55%, var(--linkB) 55%);
+  color: #0a36c0;
 }
 
 .photo{
@@ -102,7 +100,7 @@ a:hover{
   .wrap{
     transform: none;            /* remove desktop nudge */
     place-items: start center;  /* not vertically centered on short screens */
-    padding-top: 18vh;
+    padding-top: 7vh;
     padding-bottom: 8vh;
   }
 
