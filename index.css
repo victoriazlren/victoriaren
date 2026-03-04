@@ -5,7 +5,7 @@
 
   /* normal link highlight + hover highlight */
   --linkA: rgba(25, 90, 255, 0.35);
-  --linkB: rgba(25, 90, 255, 0.55);
+  --linkB: rgba(255, 214, 10, 0.45);
 }
 
 *{ box-sizing: border-box; }
