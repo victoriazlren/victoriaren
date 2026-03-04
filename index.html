@@ -1,100 +1,132 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Victoria Ren</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<title>Victoria Ren</title>
+  <body>
+    <main class="wrap">
+      <div class="grid">
+        <section class="left">
+          <h1>Victoria Ren</h1>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <p>My parents immigrated from China, and I grew up in Pittsburgh, Pennsylvania with the best older brother.</p>
 
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+          <p>
+            I’m graduating Stanford this spring. My interests are in people, culture, and institutions —
+            especially around emerging ideas and movements that can get us to better days.
+          </p>
 
-<link rel="stylesheet" href="index.css">
-</head>
+          <p>
+            These days, I’m organizing young people around the Abundance movement. Think: media, chapters,
+            placements, and more! I’ve also spent time in local campaigns, federal agencies, and service
+            delivery startups.
+          </p>
 
-<body>
+          <p>
+            I love a good project (like a pop-up
+            <a
+              href="https://drive.google.com/file/d/1Fap6yyoOBESKIoDroI9ktg5bs3QpuyIW/view?usp=sharing"
+              >“food truck”</a
+            >)…and I love quesadillas, calling, and walking anywhere and everywhere.
+          </p>
 
-<main class="wrap">
+          <p class="cta">
+            Reach me through <a href="mailto:vren@stanford.edu">email</a> or
+            <a href="https://twitter.com/Victoriazren">X</a> :)
+          </p>
+        </section>
 
-<h1>Victoria Ren</h1>
+        <aside class="right">
+          <figure class="photo">
+            <img src="headshot.jpg" alt="Photo of Victoria Ren" />
+            <figcaption>pic in D.C.!</figcaption>
+          </figure>
+        </aside>
+      </div>
+    </main>
 
-<section class="copy">
+    <!-- Collage-ish footer: books + buildings + sun (subtle, not loud) -->
+    <footer class="collage" aria-hidden="true">
+      <svg viewBox="0 0 1200 260" preserveAspectRatio="none">
+        <!-- base paper strip -->
+        <path
+          d="M0,70 C120,40 220,85 330,60 C430,35 540,95 650,70 C760,45 880,90 990,60 C1080,35 1140,55 1200,40 L1200,260 L0,260 Z"
+          class="paper"
+        />
 
-<p>
-My parents immigrated from China, and I grew up in Pittsburgh, Pennsylvania.
-</p>
+        <!-- torn edge shadow -->
+        <path
+          d="M0,76 C120,46 220,91 330,66 C430,41 540,101 650,76 C760,51 880,96 990,66 C1080,41 1140,61 1200,46"
+          class="paperShadow"
+        />
 
-<p>
-I’m graduating Stanford this spring. My interests are in people, culture, and institutions — especially around emerging ideas and movements that can get us to better days.
-</p>
+        <!-- sun -->
+        <circle cx="980" cy="110" r="28" class="sun" />
+        <circle cx="980" cy="110" r="46" class="sunRing" />
 
-<p>
-These days, I’m organizing young people around the <a href="https://stanfordabundance.carrd.co">Abundance movement</a>. Think: media, chapters, placements, and more! I’ve also spent time in local campaigns, federal agencies, and service delivery startups.
-</p>
+        <!-- Books (left-ish) -->
+        <g transform="translate(120,132)" class="books">
+          <rect x="0" y="48" width="120" height="18" rx="6" />
+          <rect x="10" y="26" width="140" height="18" rx="6" class="b2" />
+          <rect x="26" y="4" width="110" height="18" rx="6" class="b3" />
+          <path d="M6,57 h24" class="ink" />
+          <path d="M20,35 h22" class="ink" />
+          <path d="M34,13 h26" class="ink" />
+        </g>
 
-<p>
-I love a good project (like a pop-up <a href="https://drive.google.com/file/d/1Fap6yyoOBESKIoDroI9ktg5bs3QpuyIW/view?usp=sharing">food truck</a>)…and I love quesadillas, <a href="https://stanfordspokes.squarespace.com/">cycling across the country</a>, calling, and walking anywhere and everywhere.
-</p>
+        <!-- Buildings (center-right) -->
+        <g transform="translate(520,104)" class="buildings">
+          <rect x="0" y="62" width="70" height="86" rx="10" />
+          <rect x="86" y="38" width="80" height="110" rx="10" class="t2" />
+          <rect x="182" y="54" width="62" height="94" rx="10" class="t3" />
+          <!-- windows -->
+          <g class="windows">
+            <rect x="14" y="78" width="10" height="10" rx="2" />
+            <rect x="34" y="78" width="10" height="10" rx="2" />
+            <rect x="14" y="98" width="10" height="10" rx="2" />
+            <rect x="34" y="98" width="10" height="10" rx="2" />
 
-<p class="cta">
-Reach me through <a href="mailto:vren@stanford.edu">email</a> or <a href="https://twitter.com/Victoriazren">X</a> :)
-</p>
+            <rect x="102" y="56" width="10" height="10" rx="2" />
+            <rect x="124" y="56" width="10" height="10" rx="2" />
+            <rect x="102" y="78" width="10" height="10" rx="2" />
+            <rect x="124" y="78" width="10" height="10" rx="2" />
+            <rect x="102" y="100" width="10" height="10" rx="2" />
+            <rect x="124" y="100" width="10" height="10" rx="2" />
 
-</section>
+            <rect x="196" y="72" width="10" height="10" rx="2" />
+            <rect x="214" y="72" width="10" height="10" rx="2" />
+            <rect x="196" y="92" width="10" height="10" rx="2" />
+            <rect x="214" y="92" width="10" height="10" rx="2" />
+          </g>
+        </g>
 
-</main>
+        <!-- little doodle line like “collage marker” -->
+        <path
+          d="M1020,165 C1070,140 1115,150 1160,132"
+          class="doodle"
+        />
 
-<footer class="collage">
-
-<svg viewBox="0 0 1200 240" preserveAspectRatio="none">
-
-<rect x="0" y="0" width="1200" height="240" class="bg"/>
-
-<circle cx="1000" cy="70" r="32" class="sun"/>
-<circle cx="1000" cy="70" r="52" class="sunRing"/>
-
-<path d="M0,210 L120,150 L240,205 L360,120 L520,205 L640,135 L780,210 L900,160 L1040,220 L1200,175 L1200,240 L0,240 Z" class="mtn1"/>
-<path d="M0,230 L170,175 L300,235 L430,160 L610,240 L740,170 L920,240 L1060,185 L1200,235 L1200,240 L0,240 Z" class="mtn2"/>
-
-<g class="homes">
-
-<g transform="translate(120,150)">
-<rect x="0" y="35" width="54" height="40" rx="6"/>
-<path d="M-6,40 L27,14 L60,40 Z"/>
-<rect x="10" y="50" width="12" height="12" rx="2" class="window"/>
-<rect x="32" y="50" width="12" height="12" rx="2" class="window"/>
-</g>
-
-<g transform="translate(260,160) scale(0.9)">
-<rect x="0" y="35" width="54" height="40" rx="6"/>
-<path d="M-6,40 L27,14 L60,40 Z"/>
-<rect x="10" y="50" width="12" height="12" rx="2" class="window"/>
-<rect x="32" y="50" width="12" height="12" rx="2" class="window"/>
-</g>
-
-<g transform="translate(400,148) scale(1.05)">
-<rect x="0" y="35" width="54" height="40" rx="6"/>
-<path d="M-6,40 L27,14 L60,40 Z"/>
-<rect x="10" y="50" width="12" height="12" rx="2" class="window"/>
-<rect x="32" y="50" width="12" height="12" rx="2" class="window"/>
-</g>
-
-<g transform="translate(540,160) scale(0.95)">
-<rect x="0" y="35" width="54" height="40" rx="6"/>
-<path d="M-6,40 L27,14 L60,40 Z"/>
-<rect x="10" y="50" width="12" height="12" rx="2" class="window"/>
-<rect x="32" y="50" width="12" height="12" rx="2" class="window"/>
-</g>
-
-</g>
-
-</svg>
-
-</footer>
-
-</body>
+        <!-- subtle grain dots (kept light so it stays minimal) -->
+        <g class="grain">
+          <circle cx="70" cy="210" r="1.2" />
+          <circle cx="110" cy="190" r="1.1" />
+          <circle cx="160" cy="225" r="1.0" />
+          <circle cx="260" cy="205" r="1.2" />
+          <circle cx="340" cy="230" r="1.0" />
+          <circle cx="460" cy="210" r="1.1" />
+          <circle cx="600" cy="235" r="1.0" />
+          <circle cx="740" cy="210" r="1.2" />
+          <circle cx="860" cy="230" r="1.0" />
+          <circle cx="940" cy="205" r="1.1" />
+          <circle cx="1080" cy="220" r="1.0" />
+        </g>
+      </svg>
+    </footer>
+  </body>
 </html>
 
 
