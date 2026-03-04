@@ -1,91 +1,114 @@
-:root {
-  --text: #111;
-  --muted: #555;
-  --rule: rgba(0, 0, 0, 0.18);
+:root{
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #333333;
+
+  /* tasteful color, not too loud */
+  --accent: #2f6bff;
+  --accent2: #ff4d7d;
+  --paper: #f6f2ea;  /* warm band for collage */
+  --mtn1: #c9d7ff;
+  --mtn2: #ffd1dc;
+  --home: #1a1a1a;
+  --window: #ffffff;
+  --sun: #ffd24a;
+  --sunRing: rgba(255, 210, 74, 0.35);
 }
 
-* {
-  box-sizing: border-box;
-}
+*{ box-sizing: border-box; }
 
-body {
+html, body { height: 100%; }
+
+body{
   margin: 0;
-  font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: #fff;
+  font-family: "Space Grotesk", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
-#container {
-  max-width: 900px;
-  margin: 64px auto;
-  padding: 0 24px;
+/* Responsive padding so it “fits whatever screen it’s on” */
+.wrap{
+  min-height: calc(100vh - 220px); /* reserves space for the collage */
+  padding: clamp(18px, 4vw, 56px);
+  padding-bottom: clamp(28px, 6vw, 72px);
 
-  display: flex;
-  gap: 48px;
-  align-items: flex-start;
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.left {
-  flex: 1;
-  min-width: 0;
+/* Big name, clean, with a little personality */
+h1{
+  margin: 0 0 clamp(18px, 3vw, 28px);
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
-.right {
-  width: 240px;
-  text-align: center;
+/* Comfortable reading width without “giant margins” */
+.copy{
+  max-width: 64ch;
 }
 
-h1 {
+p{
   margin: 0 0 16px;
-  font-size: 2.25rem;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-}
-
-p {
-  margin: 0 0 14px;
-  line-height: 1.65;
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.55;
   color: var(--muted);
 }
 
-a {
-  color: inherit;
+p.cta{
+  margin-top: 18px;
+  color: var(--text);
+}
+
+a{
+  color: var(--text);
   text-decoration: none;
-  border-bottom: 1px solid var(--rule);
+  background:
+    linear-gradient(transparent 70%, rgba(47,107,255,0.18) 70%);
+  padding: 0 2px;
+  border-radius: 3px;
 }
 
-a:hover {
-  border-bottom-color: rgba(0, 0, 0, 0.45);
+a:hover{
+  background:
+    linear-gradient(transparent 55%, rgba(255,77,125,0.22) 55%);
 }
 
-figure {
-  margin: 0;
-}
-
-#image {
+/* Bottom collage pinned + responsive */
+.collage{
+  height: 220px;
   width: 100%;
-  height: auto;
+  overflow: hidden;
+}
+
+.collage svg{
+  width: 100%;
+  height: 100%;
   display: block;
-  border-radius: 12px;
-  /* subtle polish without looking “designed” */
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
 }
 
-figcaption {
-  margin-top: 10px;
-  font-size: 0.95rem;
-  color: #666;
+.collage .bg{ fill: var(--paper); }
+.collage .mtn1{ fill: var(--mtn1); }
+.collage .mtn2{ fill: var(--mtn2); opacity: 0.95; }
+
+.collage .sun{ fill: var(--sun); }
+.collage .sunRing{ fill: var(--sunRing); }
+
+.collage .homes rect,
+.collage .homes path{
+  fill: var(--home);
+  opacity: 0.92;
 }
 
-@media (max-width: 720px) {
-  #container {
-    margin: 40px auto;
-    flex-direction: column;
-    gap: 28px;
-  }
+.collage .homes .window{
+  fill: var(--window);
+  opacity: 0.92;
+}
 
-  .right {
-    width: min(280px, 100%);
-  }
+/* On small screens, reduce reserved space a bit */
+@media (max-width: 520px){
+  .wrap{ min-height: calc(100vh - 190px); }
+  .collage{ height: 190px; }
 }
